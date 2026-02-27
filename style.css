@@ -1,0 +1,115 @@
+:root {
+  color-scheme: dark;
+  --bg: #090b16;
+  --panel: #11162a;
+  --text: #eff4ff;
+  --accent: #57f6ff;
+  --danger: #ff4f86;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, #1e2450, var(--bg) 55%);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  padding: 1rem;
+}
+
+.app {
+  width: min(100%, 460px);
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.stats {
+  text-align: right;
+  font-weight: 600;
+}
+
+.stats p {
+  margin: 0.2rem 0;
+}
+
+.game-wrap {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 2px solid #2f4077;
+  box-shadow: 0 0 0 2px rgba(87, 246, 255, 0.2), 0 22px 34px rgba(3, 4, 13, 0.55);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  background: linear-gradient(180deg, #11162e 0%, #0a0d19 100%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 8, 20, 0.82);
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay h2,
+.overlay p {
+  margin: 0;
+}
+
+#start-btn {
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #011421;
+  font-weight: 700;
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+}
+
+.controls {
+  margin-top: 0.9rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.control-btn {
+  border: 2px solid #2f4077;
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--text);
+  font-size: 1.3rem;
+  padding: 0.7rem 0;
+  cursor: pointer;
+}
+
+.tips {
+  color: #bfcaed;
+  font-size: 0.93rem;
+  text-align: center;
+}

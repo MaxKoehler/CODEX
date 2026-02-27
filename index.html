@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Dodge</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hud">
+        <h1>Neon Dodge</h1>
+        <div class="stats">
+          <p>Score: <span id="score">0</span></p>
+          <p>Best: <span id="best">0</span></p>
+        </div>
+      </header>
+
+      <section class="game-wrap">
+        <canvas id="game" width="420" height="600" aria-label="Neon Dodge game area"></canvas>
+        <div id="overlay" class="overlay">
+          <h2 id="overlay-title">Tap Start</h2>
+          <p id="overlay-copy">Move left or right and survive as long as possible.</p>
+          <button id="start-btn" type="button">Start Game</button>
+        </div>
+      </section>
+
+      <section class="controls">
+        <button class="control-btn" id="left-btn" aria-label="Move left">⬅</button>
+        <button class="control-btn" id="right-btn" aria-label="Move right">➡</button>
+      </section>
+
+      <p class="tips">Use ← and → keys on desktop, or tap buttons on mobile.</p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
